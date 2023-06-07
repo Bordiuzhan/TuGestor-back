@@ -1,0 +1,362 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>PDF</title>
+    <style>
+      .general-info{ border: 2px black solid; border-radius: 5px; padding: 20px 10px 10px 5px; display: flex;
+      flex-direction: column; gap: 12px; } .row{ display: flex; width: 100%; }.row--part{ display: flex; gap: 5px;
+      align-items: flex-end; white-space: nowrap; } .row .left-part{ width: 60%; } .row .right-part{ width: 40%;
+      }.row--part span{white-space: pre-wrap;width: 100%; text-align: center; border-bottom: 2px dotted rgba(0, 0, 0,
+      0.5); }.table { width: 100%; border: 2px black solid; border-radius: 5px 5px 0 5px; margin: 30px 0 15px;
+      border-collapse: collapse; border-style: hidden; box-shadow: 0 0 0 2px #000; } .thead { letter-spacing: 0.5em;
+      text-transform: uppercase; border: 1px solid black; } .thead th { padding: 4px; border: 2px black solid; }
+      .concepto { width:65%; } .precio-total { width: 20%; } .tbody td{ border: 1px black solid; border-right-width:
+      2px; padding: 7px 15px 5px 15px; font-size: 1.1em; text-align: center;}.concepto--td{ font-weight: 600;
+      text-align: left !important;} .table-container{ position: relative; } .table-total{ position: absolute; right:
+      -2px; bottom: 0; transform: translate(0,100%); display: flex; font-size: 1.1em; font-weight: 500; } .table-total
+      .names>div, .table-total .values>div{ padding: 19px 0px 13px 0px; } .table-total .values{ width: 150px; border:
+      2px solid black; border-top:none; border-radius: 0 0 5px 5px; text-align: center; } .table-total .names>div{
+      border-bottom: 1px solid black; padding-right: 12px; } .table-total .names>div:nth-last-child(1){ border-bottom:
+      none; font-size: 1.3em; } .table-total .values>div{ border-bottom: 1px solid black; } .table-total
+      .values>div:nth-last-child(1){ border-bottom: none; font-size: 1.3em; text-transform: uppercase; } .aparat-info{
+      border: 2px solid black; border-radius: 5px; width: 55%; padding: 15px 10px 10px 5px; display: flex;
+      flex-direction: column; gap: 13px; width: 450px; font-weight: 600; } .aparat-info .row--part{ width: 100%; }
+      .aparat-info span{ font-weight: 500; } .signatures{ margin-top: 30px; border: 2px solid black; border-radius: 5px;
+      width: 100%; height: 180px; display: flex; } .signature-container{ box-sizing: border-box; height: 100%; width:
+      33.3%; border-right: 2px solid black; display: flex; flex-direction: column; align-items: center; padding: 5px; }
+      .signature-container:nth-last-of-type(1){ border-right: none; } .signature-container span{ display: block; }
+      .signature{ height: 100%; max-width: 100%; max-height: 100%; object-fit: scale-down; } .signature-container
+      .row--part{ margin-top: 5px; width: 100%; font-size: 0.8em; } .image-container{ width: 100%; height: 100%;
+      position: relative; } .image-inner-container{ position: absolute; top: 0px; height: 0px; width: 100%; height:
+      100%; display: flex; align-items: center; justify-content: center; } .header{ display: flex; align-items: center;
+      justify-content: space-between; margin-top: 10px; margin-bottom: 30px; padding: 0 5px; } .logo{ width:
+      390px;height: 88px; display: flex; align-items: center;} .logo__image svg{height: 88px; width: 88px} .logo__text
+      svg{height: 65px; width: 230px} .logo__text div{font-size: 14px; padding-left: 5px} .tel{ color: black; font-size:
+      55px; line-height: 60px;font-weight: 700; }.address{ margin: 0px 0 5px 0; font-size: 16px; }
+    </style>
+  </head>
+  <body>
+    <header class='header'>
+      <div class='logo'>
+        <div class='logo__image'>
+          <svg
+            version='1.0'
+            xmlns='http://www.w3.org/2000/svg'
+            width='193.000000pt'
+            height='193.000000pt'
+            viewBox='0 0 193.000000 193.000000'
+            preserveAspectRatio='xMidYMid meet'
+          >
+            <g transform='translate(0.000000,193.000000) scale(0.100000,-0.100000)' fill='#000000' stroke='none'><path
+                d='M755 1714 c-142 -22 -380 -85 -447 -120 -59 -30 -59 -36 -61 -502 -2
+-389 0 -432 16 -487 47 -153 151 -254 333 -323 146 -56 277 -75 418 -61 249
+23 469 146 550 307 51 100 56 147 56 532 0 195 -5 384 -10 419 -13 90 -35 110
+-171 155 -186 62 -273 77 -474 81 -99 2 -193 1 -210 -1z m390 -380 l215 -147
+0 -268 0 -269 -427 2 -428 3 -3 266 -2 267 212 145 c117 80 214 146 215 146 2
+1 99 -65 218 -145z'
+              ></path><path
+                d='M850 1110 l0 -59 -62 -3 -63 -3 -3 -77 -3 -78 66 0 65 0 0 -65 0 -66
+78 3 77 3 3 63 3 62 65 0 65 0 -3 78 -3 77 -62 3 -63 3 0 59 0 60 -80 0 -80 0
+0 -60z'
+              ></path></g>
+          </svg></div>
+        <div class='logo__text'>
+          <svg
+            version='1.0'
+            xmlns='http://www.w3.org/2000/svg'
+            width='660.000000pt'
+            height='193.000000pt'
+            viewBox='193.000000 0 660.000000 193.000000'
+            preserveAspectRatio='xMidYMid meet'
+          >
+            <g transform='translate(0.000000,193.000000) scale(0.100000,-0.100000)' fill='#000000' stroke='none'>
+
+              <path
+                d='M2010 1216 l0 -506 273 0 c302 0 381 11 476 67 164 96 254 277 238
+478 -17 211 -132 362 -330 433 -70 25 -81 26 -364 30 l-293 4 0 -506z m538
+218 c20 -8 50 -27 65 -42 50 -47 61 -79 62 -177 0 -81 -3 -95 -28 -137 -18
+-31 -44 -57 -74 -75 -42 -24 -56 -27 -147 -28 l-101 0 -3 238 -2 237 95 0 c64
+0 108 -5 133 -16z'
+              ></path>
+              <path
+                d='M4496 1688 c-10 -24 -246 -605 -393 -965 -4 -10 31 -13 155 -13 l160
+0 30 83 30 82 183 0 183 0 29 -82 30 -83 163 0 162 0 -132 328 c-73 180 -166
+407 -206 505 l-72 177 -155 0 -154 0 -13 -32z m209 -425 c21 -60 40 -114 43
+-120 3 -10 -19 -13 -88 -13 -50 0 -90 4 -88 8 2 5 21 59 43 120 21 62 42 112
+46 112 3 0 23 -48 44 -107z'
+              ></path>
+              <path
+                d='M5360 1215 l0 -505 370 0 370 0 0 130 0 130 -210 0 -210 0 -2 373 -3
+372 -157 3 -158 3 0 -506z'
+              ></path>
+              <path
+                d='M6360 1215 l0 -505 390 0 390 0 0 125 0 125 -232 2 -233 3 -3 68 -3
+67 201 0 200 0 0 120 0 120 -197 2 -198 3 -3 58 -3 57 226 0 225 0 0 130 0
+130 -380 0 -380 0 0 -505z'
+              ></path>
+              <path
+                d='M7320 1710 c0 -6 68 -114 151 -241 83 -127 153 -237 155 -244 3 -7
+-66 -120 -153 -252 -88 -131 -163 -244 -167 -250 -6 -10 31 -13 172 -13 l180
+0 76 130 c42 72 81 128 85 125 5 -2 42 -61 82 -130 l74 -125 178 0 c97 0 177
+3 177 6 0 3 -74 118 -165 255 -91 138 -165 255 -165 260 0 5 68 111 151 235
+82 124 153 232 156 240 4 12 -21 14 -160 14 l-166 0 -77 -126 c-51 -83 -80
+-122 -87 -115 -5 5 -42 60 -81 123 l-72 113 -172 3 c-114 2 -172 -1 -172 -8z'
+              ></path>
+              <path
+                d='M3551 1495 c-24 -7 -61 -27 -82 -44 -21 -17 -40 -31 -43 -31 -3 0 -6
+17 -8 38 l-3 37 -140 0 -140 0 -3 -392 -2 -393 155 0 155 0 0 200 c0 238 7
+267 74 300 26 12 62 20 94 20 l52 0 0 140 0 140 -32 -1 c-18 0 -53 -6 -77 -14z'
+              ></path>
+              <path d='M3760 780 l0 -70 70 0 71 0 -3 68 -3 67 -67 3 -68 3 0 -71z'></path>
+              <path
+                d='M2040 326 l0 -136 48 0 c115 0 152 32 152 129 0 105 -25 131 -132
+139 l-68 5 0 -137z m132 67 c13 -12 18 -30 18 -69 0 -63 -17 -84 -66 -84 l-34
+0 0 85 0 85 32 0 c17 0 40 -7 50 -17z'
+              ></path>
+              <path
+                d='M2334 445 c-34 -23 -47 -68 -42 -141 4 -58 8 -70 32 -90 47 -41 142
+-28 165 23 6 13 11 56 11 94 0 65 -2 73 -29 100 -24 23 -38 29 -73 29 -24 0
+-53 -7 -64 -15z m104 -47 c7 -7 12 -39 12 -73 0 -70 -10 -85 -57 -85 -39 0
+-53 21 -53 79 0 66 14 91 53 91 18 0 38 -5 45 -12z'
+              ></path>
+              <path
+                d='M2605 448 c-38 -20 -45 -40 -45 -125 0 -76 2 -86 25 -108 49 -50 165
+-21 165 41 0 31 -34 33 -50 3 -9 -16 -19 -19 -48 -17 l-37 3 0 80 0 80 38 3
+c32 3 39 0 44 -17 4 -15 13 -21 33 -21 24 0 27 3 22 25 -10 53 -93 83 -147 53z'
+              ></path>
+              <path
+                d='M2790 435 c0 -22 4 -25 35 -25 l34 0 3 -107 c3 -103 4 -108 25 -111
+22 -3 22 0 25 105 l3 108 38 3 c33 3 38 6 35 25 -3 21 -9 22 -100 25 l-98 3 0
+-26z'
+              ></path>
+              <path
+                d='M3069 445 c-66 -36 -66 -209 0 -245 26 -13 87 -13 114 2 39 20 46 40
+47 125 0 79 -1 82 -31 107 -35 30 -88 34 -130 11z m99 -47 c17 -17 16 -133 -2
+-147 -8 -7 -30 -11 -48 -9 l-33 3 -3 69 c-2 38 -1 75 2 83 7 16 68 17 84 1z'
+              ></path>
+              <path
+                d='M3294 447 c-2 -7 -3 -67 -2 -133 l3 -119 25 0 c23 0 25 4 28 48 4 64
+29 64 70 -3 21 -34 38 -50 52 -50 26 0 25 15 -2 66 -20 39 -21 43 -5 59 40 40
+29 106 -23 132 -34 17 -139 17 -146 0z m136 -58 c16 -28 -4 -49 -46 -49 -32 0
+-34 2 -34 35 0 33 2 35 35 35 24 0 37 -6 45 -21z'
+              ></path>
+              <path
+                d='M3640 326 l0 -136 48 0 c115 0 152 32 152 129 0 105 -25 131 -132
+139 l-68 5 0 -137z m132 67 c13 -12 18 -30 18 -69 0 -63 -17 -84 -66 -84 l-34
+0 0 85 0 85 32 0 c17 0 40 -7 50 -17z'
+              ></path>
+              <path
+                d='M3907 454 c-4 -4 -7 -65 -7 -136 l0 -128 85 0 c84 0 85 0 85 25 0 24
+-3 25 -60 25 l-60 0 0 30 c0 29 1 30 50 30 47 0 50 2 50 25 0 23 -3 25 -51 25
+-49 0 -50 1 -47 28 3 26 6 27 61 30 54 3 58 5 55 25 -3 20 -9 22 -78 25 -42 1
+-79 0 -83 -4z'
+              ></path>
+              <path
+                d='M4215 447 c-3 -7 -4 -67 -3 -133 l3 -119 85 0 c78 0 85 2 85 20 0 17
+-8 20 -57 23 -57 3 -58 4 -58 32 0 27 2 29 48 32 39 3 47 6 47 23 0 17 -8 20
+-47 23 -46 3 -48 5 -48 32 0 28 1 29 58 32 49 3 57 6 57 23 0 18 -8 20 -83 23
+-62 2 -84 -1 -87 -11z'
+              ></path>
+              <path
+                d='M4440 326 l0 -136 85 0 c84 0 85 0 85 25 0 24 -3 25 -60 25 l-59 0
+-3 108 c-3 102 -4 107 -25 110 -23 3 -23 3 -23 -132z'
+              ></path>
+              <path
+                d='M4660 325 l0 -136 83 3 c74 3 82 5 82 23 0 17 -8 20 -57 23 -57 3
+-58 4 -58 32 0 27 2 29 48 32 39 3 47 6 47 23 0 17 -8 20 -47 23 -46 3 -48 5
+-48 32 0 28 1 29 58 32 49 3 57 6 57 23 0 18 -8 20 -82 23 l-83 3 0 -136z'
+              ></path>
+              <path
+                d='M4913 445 c-31 -22 -46 -78 -40 -149 7 -77 35 -106 103 -106 50 0 94
+32 94 70 0 27 -45 28 -53 2 -5 -23 -35 -32 -65 -21 -21 8 -23 14 -20 86 l3 78
+32 3 c24 2 35 -2 45 -17 15 -24 58 -29 58 -7 0 62 -101 101 -157 61z'
+              ></path>
+              <path
+                d='M5110 435 c0 -22 4 -25 35 -25 l35 0 0 -110 0 -110 25 0 25 0 0 109
+0 110 38 3 c29 2 37 7 37 23 0 18 -8 20 -97 23 l-98 3 0 -26z'
+              ></path>
+              <path
+                d='M5350 326 c0 -137 0 -137 23 -134 19 3 22 10 25 51 3 41 6 47 25 47
+16 0 30 -14 49 -50 19 -33 34 -50 47 -50 31 0 33 15 6 62 -25 45 -25 45 -5 63
+26 23 27 85 2 115 -15 19 -31 24 -95 28 l-77 5 0 -137z m133 63 c18 -29 1 -49
+-43 -49 -39 0 -40 1 -40 36 0 34 1 35 36 32 21 -2 42 -10 47 -19z'
+              ></path>
+              <path
+                d='M5631 434 c-30 -25 -31 -28 -31 -107 1 -106 24 -137 105 -137 47 0
+71 13 90 50 18 35 20 129 3 165 -26 58 -115 73 -167 29z m107 -33 c9 -5 12
+-29 10 -81 -3 -63 -6 -74 -24 -81 -12 -4 -31 -2 -45 5 -21 10 -24 20 -27 75
+-2 38 2 68 9 77 13 15 56 19 77 5z'
+              ></path>
+              <path
+                d='M5870 326 l0 -136 48 0 c115 0 152 33 152 134 0 100 -24 124 -131
+133 l-69 6 0 -137z m134 62 c21 -30 21 -112 0 -132 -8 -9 -31 -16 -50 -16
+l-34 0 0 85 0 85 34 0 c25 0 39 -7 50 -22z'
+              ></path>
+              <path
+                d='M6153 436 c-25 -22 -28 -31 -31 -105 -4 -78 -3 -81 26 -111 41 -41
+106 -42 151 -4 30 25 31 29 31 106 0 75 -2 81 -29 109 -39 39 -106 41 -148 5z
+m115 -38 c7 -7 12 -39 12 -73 0 -70 -10 -85 -57 -85 -38 0 -53 25 -53 85 0 60
+15 85 53 85 18 0 38 -5 45 -12z'
+              ></path>
+              <path
+                d='M6394 447 c-2 -7 -3 -67 -2 -133 3 -114 4 -119 25 -122 21 -3 22 1
+25 80 l3 83 23 -37 c14 -23 32 -38 43 -38 12 0 28 15 42 38 l22 37 5 -80 c5
+-74 7 -80 28 -83 22 -3 22 -3 22 132 0 130 -1 136 -20 136 -14 0 -32 -18 -55
+-55 -20 -30 -39 -55 -43 -55 -4 0 -22 25 -40 55 -33 54 -66 72 -78 42z'
+              ></path>
+              <path
+                d='M6707 453 c-4 -3 -7 -64 -7 -135 l0 -128 85 0 c84 0 85 0 85 25 0 24
+-3 25 -60 25 -60 0 -60 0 -60 29 0 29 2 30 53 33 44 3 52 6 52 23 0 17 -8 20
+-53 23 -51 3 -53 4 -50 30 3 25 6 27 61 30 53 3 57 5 57 27 0 24 -2 25 -78 25
+-43 0 -82 -3 -85 -7z'
+              ></path>
+              <path
+                d='M6946 439 c-19 -15 -26 -30 -26 -53 0 -39 17 -56 88 -86 63 -27 68
+-53 10 -58 -29 -2 -39 1 -48 17 -13 25 -60 29 -60 5 0 -8 13 -29 29 -45 58
+-58 171 -28 171 45 0 40 -19 59 -85 83 -37 14 -50 24 -50 38 0 30 51 33 81 4
+46 -43 75 1 29 46 -32 33 -100 35 -139 4z'
+              ></path>
+              <path
+                d='M7150 435 c0 -22 4 -25 35 -25 l35 0 0 -110 0 -110 25 0 25 0 0 110
+0 110 41 0 c36 0 40 2 37 23 -3 21 -8 22 -100 25 l-98 3 0 -26z'
+              ></path>
+              <path
+                d='M7390 331 l0 -131 25 0 26 0 -3 128 c-3 123 -4 127 -25 130 -23 3
+-23 3 -23 -127z'
+              ></path>
+              <path
+                d='M7533 436 c-27 -23 -28 -28 -28 -111 0 -83 1 -88 28 -111 57 -49 167
+-19 167 46 0 28 -33 26 -63 -4 -45 -45 -87 -11 -87 69 0 58 16 85 50 85 19 0
+34 -7 42 -20 16 -25 58 -27 58 -2 -1 64 -111 96 -167 48z'
+              ></path>
+              <path
+                d='M7798 445 c-35 -19 -51 -72 -46 -148 6 -75 35 -107 99 -107 85 0 108
+29 109 137 0 79 -1 82 -31 107 -35 30 -88 34 -131 11z m100 -47 c17 -17 16
+-133 -2 -147 -8 -7 -30 -11 -48 -9 l-33 3 -3 74 c-2 53 1 77 10 82 19 13 62
+11 76 -3z'
+              ></path>
+              <path
+                d='M8044 437 c-29 -26 -35 -67 -13 -94 8 -9 37 -27 66 -39 57 -26 65
+-34 53 -53 -12 -20 -58 -16 -84 8 -12 11 -30 21 -39 21 -26 0 -21 -38 9 -65
+38 -35 115 -35 149 0 49 48 28 96 -56 129 -39 16 -54 28 -54 42 0 29 60 33 75
+5 11 -21 44 -28 55 -12 9 16 -16 58 -42 70 -40 18 -89 13 -119 -12z'
+              ></path>
+              <path
+                d='M8277 454 c-4 -4 -7 -45 -7 -91 0 -82 0 -83 25 -83 l26 0 -3 87 c-2
+70 -6 88 -18 91 -9 1 -19 0 -23 -4z'
+              ></path>
+              <path
+                d='M8270 214 c0 -21 4 -25 23 -22 14 2 23 11 25 26 3 18 -1 22 -22 22
+-21 0 -26 -5 -26 -26z'
+              ></path>
+            </g>
+          </svg>
+          <div class='nie'> NIE - X 7587011-R Oleksandr Chernyy</div></div>
+      </div>
+      <div class='contacts'>
+        <div class='tel'>692 82 74 73</div>
+        <div class='address'>c/ Reino, 18-2- (local) · 50003 ZARAGOZA</div>
+      </div>
+    </header>
+    <div class='general-info'>
+      <div class='row'>
+        <div class='row--part left-part'>№ {{type}}<span>{{year}}{{number}}</span></div>
+        <div class='row--part right-part'>Fecha<span>{{date}}</span></div>
+      </div>
+      <div class='row'>
+        <div class='row--part left-part'>Cliente<span>{{name}}</span></div>
+        <div class='row--part right-part'>D.N.I.<span>{{dni}}</span></div>
+      </div>
+      <div class='row'>
+        <div class='row--part left-part'>Dirección<span>{{address}}</span></div>
+        <div class='row--part right-part'>Postal <span>{{postal}}</span></div>
+      </div>
+      <div class='row'>
+        <div class='row--part left-part'>E-mail<span>{{email}}</span></div>
+        <div class='row--part right-part'>Tel.<span>{{tel}}</span></div>
+      </div>
+    </div>
+    <div class='table-container'>
+      <table class='table'>
+        <thead class='thead'>
+          <tr>
+            <th class='concepto'>Concepto</th>
+            <th>Unidad</th>
+            <th class='precio-total'>Precio total</th>
+          </tr>
+        </thead>
+        <tbody class='tbody'>
+          {{#tableData}}
+            <tr>
+              <td class='concepto--td'>{{name}}</td>
+              <td>{{price}}</td>
+              <td>{{total}}</td>
+            </tr>
+          {{/tableData}}
+        </tbody>
+      </table>
+      <div class='table-total'>
+        <div class='names'><div>Subtotal</div><div>21% I.V.A.</div><div>TOTAL</div></div>
+        <div class='values'><div>{{subtotal}}</div><div>{{iva}}</div><div>{{total}}</div></div>
+      </div>
+    </div>
+    <div class='aparat-info'>
+      <div class='row'>
+        <div class='row--part'>Aparato<span>{{aparat}}</span></div>
+      </div>
+      <div class='row'>
+        <div class='row--part'>Marca<span>{{brand}}</span></div>
+      </div>
+      <div class='row'>
+        <div class='row--part'>Modelo<span>{{model}}</span></div>
+      </div>
+      <div class='row'>
+        <div class='row--part'>№ Serie<span>{{serie}}</span></div>
+      </div>
+    </div>
+
+    <div class='signatures'>
+      <div class='signature-container'>
+        <span>Firma</span>
+        <div class='image-container'>
+          <div class='image-inner-container'>
+            <img class='signature' src={{signatureFirst}} />
+          </div>
+        </div>
+      </div>
+
+      <div class='signature-container'>
+        <span>Visto bueno al presupuesto</span>
+        <div class='row'>
+          <div class='row--part'>Mano de obra<span>{{mano}}</span></div>
+        </div>
+
+        <div class='row'>
+          <div class='row--part'>Material<span>{{material}}</span></div>
+        </div>
+        <div class='image-container'>
+          <div class='image-inner-container'>
+            <img class='signature' src={{signatureSecond}} />
+          </div>
+        </div>
+      </div>
+
+      <div class='signature-container'>
+        <span>He recibido la cantidad de:</span>
+        <div class='image-container'>
+          <div class='image-inner-container'>
+            <img class='signature' src={{signatureThird}} />
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>Condiciones de garantia: las reparaciones e instalaciones realizadas tienen una garantia de 3 meses en los
+      términos establecidos en el articulo 11 de la Ley General para la defensa de los consumidores. Quedan excluidos de
+      la garantía aquellos trabajos en la que haya existido manipulación posterior por parte de personal ajeno a esta
+      empresa, así como los problemas derivados de mal uso de los elementos que son objeto de esta garantia. Los
+      trabajos de desatascos, virus y configuraciones informáticas yaperturas, tienen limitada la garantia en función de
+      su naturaleza. Existen hojas de reclamación del cliente.</p>
+  </body>
+</html>

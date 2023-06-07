@@ -7,7 +7,7 @@ mongoose.set('strictQuery', true);
 mongoose
   .connect(DB_HOST)
   .then(() =>
-    app.listen(3000, () => {
+    app.listen(3002, () => {
       console.log('Database connection successful');
     })
   )
